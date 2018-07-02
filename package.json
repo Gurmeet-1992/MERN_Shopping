@@ -1,0 +1,23 @@
+{
+  "name": "mern_shopping",
+  "version": "1.0.0",
+  "description": "MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server":"nodemon server.js",
+    "client":"npm start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postBuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Gurmeet Singh",
+  "license": "MIT",
+  "dependencies": {
+    "D": "^1.0.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.7",
+    "nodemon": "^1.17.5"
+  }
+}
